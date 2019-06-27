@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding>
+  <ion-list lines="full">
+    <ion-item>
+      <ion-input required type="text" placeholder="Name" [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input required type="text" placeholder="Username" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input required type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input required type="text" placeholder="PhoneNumber" [(ngModel)]="phnumber"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="signup()">Register</ion-button>
+</ion-content>

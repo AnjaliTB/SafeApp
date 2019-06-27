@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Contacts
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+      <ng-container  class="list" *ngIf="!contacts">
+          <ion-label>No Contacts</ion-label>
+        </ng-container>
+      <ng-container *ngIf="contacts">
+        
+        <ion-item-sliding *ngFor="let t of contacts">
+            <ion-item *ngIf="t.userid==user">
+                {{t.contactname}}
+                <ion-buttons slot="end">
+                    <button ion-button color="danger" (click)="update(t.id)">
+                        <ion-icon name="settings"></ion-icon> 
+                    </button>
+                    <button ion-button color="danger" (click)="delete(t.id)">
+                        <ion-icon name="trash"></ion-icon> 
+                    </button>
+                </ion-buttons>
+                <br>{{t.contactnumber}}
+                <br>
+                <br>
+            </ion-item>
+      </ion-item-sliding>
+    </ng-container>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="addContact()">
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+</ion-content>

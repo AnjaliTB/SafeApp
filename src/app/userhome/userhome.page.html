@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Home
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content padding="true">
+    <ion-list>
+        <ion-button expand="block"  color="primary" (click)="sendSMS()"  round outline>Panic Alert</ion-button>
+       <br>
+        <ion-button expand="block"  color="primary" (click)="callnumber()"  round outline>Panic Call</ion-button>
+        <br>
+      <ion-button expand="block" color="primary" (click)="navigatemap()" round outline>Navigate</ion-button>
+      <br>
+      <ion-button expand="block" color="primary" (click)="trackUser()" round outline>Start Tracking</ion-button>
+      <br>
+      <ion-button expand="block" color="primary" (click)="stop()" round outline>Stop Tracking</ion-button>
+    </ion-list>
+  </ion-content>
+  

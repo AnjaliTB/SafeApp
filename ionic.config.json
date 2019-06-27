@@ -1,5 +1,7 @@
 {
   "name": "safeapp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

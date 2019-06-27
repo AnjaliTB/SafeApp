@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/contacts"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Update Contact</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="login-content" padding>
+    <!--<ion-row class="logo-row" color="primary">
+      <ion-col>
+        <ion-title align="center" >
+          Update
+        </ion-title>
+      </ion-col>
+    </ion-row>-->
+  
+    <ion-card>
+      <div class="login-box">
+          <ion-row>
+            <ion-col>
+              <ion-list inset>
+  
+                <ion-item>
+                  <ion-input type="text" placeholder="Contact name" name="c0ntactname" [(ngModel)]="contactname" ></ion-input>
+                </ion-item>
+  
+                <ion-item>
+                  <ion-input type="text" placeholder="Contact number" name="contactnumber" [(ngModel)]="contactnumber"></ion-input>
+                </ion-item>
+  
+                <!--<ion-item>
+                  <ion-label>Remember Me</ion-label>
+                  <ion-checkbox (ionChange)="updateStatus()" checked="true"></ion-checkbox>
+                </ion-item>-->
+  
+  
+              </ion-list>
+            </ion-col>
+          </ion-row>
+  
+          <ion-row>
+            <ion-col class="signup-col">
+              <!--<button ion-button  expand="full" type="submit" [disabled]="!loginForm.form.valid">Login</button>-->
+              <ion-button expand="full" (click)="updatecontact()">Update</ion-button>
+            </ion-col>
+          </ion-row>
+  
+      </div>
+    </ion-card>
+  
+  </ion-content>
+
